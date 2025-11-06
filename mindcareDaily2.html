@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindCare Daily</title>
+<link rel="stylesheet" href="mindcareDaily2.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h1>MindCare Daily</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#reminders">Reminders</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#help">Help</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <h2>“Your mind matters. Take a deep breath — you’re doing better than you think.”</h2>
+  </header>
+
+  <!-- Daily Reminders -->
+  <section id="reminders">
+    <h2>🌞 Daily Reminders</h2>
+    <p>A wise person knows that there is something to be learned from everyone</p>
+    <div class="cards">
+      <div class="card">
+        <h3>You Are Enough</h3>
+        <p>Stop comparing your progress to others. You are growing at your own pace — and that’s beautiful.</p>
+      </div>
+      <div class="card">
+        <h3>Rest Is Productive</h3>
+        <p>It’s okay to pause. Resting is part of healing and recharging your mind and body.</p>
+      </div>
+      <div class="card">
+        <h3>Feel to Heal</h3>
+        <p>Your emotions are valid. Allow yourself to feel them — it’s a sign of strength, not weakness.</p>
+      </div>
+      <div class="card">
+        <h3>You are not behind</h3>
+        <p>You are becoming who you are meant to be. Don't rush growth, beautiful things take time.</p>
+      </div>
+      <div class="card">
+        <h3>Life is a gracious gift</h3>
+        <p>Be happy with what you have. A positive mind is the key to positive lifestyle.</p>
+      </div>
+      <div class="card">
+        <h3>Every step counts</h3>
+        <p>Our destiny changes with our thoughts:we shall become what we wish to become, do what we wish to do, when our habitual thought corresponds with our desire.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wellness Tips -->
+  <section id="tips">
+    <h2>🌿 Wellness Tips</h2>
+    <p>With perseverance and endurance you can survive any storm.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Meditate 10 Minutes</h3>
+        <p>Start your morning with calm — breathe deeply, reflect, and welcome peace. <em>NB</em> Meditation on the scriptures transforms our lives.</p>
+      </div>
+      <div class="card">
+        <h3>Connect With Nature</h3>
+        <p>Take a short walk, feel the sun, or just listen to birds — nature helps refresh your mind.</p>
+      </div>
+      <div class="card">
+        <h3>Your mind deserves kindness too</h3>
+        <p>Rest is productive. You're allowed to slow down. Peace begins the moment you let go of control.</p>
+      </div>
+      <div class="card">
+        <h3>Be in control of your life</h3>
+        <p>Never allow anyone to hold the key to your happiness, key to your heart, or key to your dreams. No one should have the power to manipulate your life, optimism, love, or success.</p>
+      </div>
+      <div class="card">
+        <h3>Reflect on yourself</h3>
+        <p>Use your senses to see yourself for who you
+          truly are. Smell the flowers and become one with nature. Taste the goodness of God. Hear the truth. Touch the hearts of others with kindness and honest deeds.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Talk to Someone</h3>
+        <p>Never carry it all alone. Sharing your thoughts can ease the load and open healing.</p>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- Get Help -->
+  <section id="help">
+    <h2>💬 Get Help</h2>
+    <p>If you ever feel overwhelmed, please reach out. You are not alone.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Kenya Mental Health Helpline</h3>
+        <p>📞 1199 (24/7 Support Line)</p>
+      </div>
+      <div class="card">
+        <h3>MindCare Support Email</h3>
+        <p>📧 support@mindcare.org</p>
+      </div>
+      <div class="card">
+        <h3>Visit a Counselor</h3>
+        <p>Professional help can guide you through — don’t hesitate to ask for support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Quotes Section -->
+  <section id="quotes">
+    <div><h2>💭 Daily Inspiration</h2>
+    <p>Let these words guide your day:</p>
+    <div id="daily-quote">Loading your daily quote...</div>
+   <!--<button id="savedQuoteBtn" class="save-btn">🤍 Save Favorite Quote</button>
+   <div id="savedQuotes" class="saved-area"><p>You don't have to be positive all the time. It's okay tyo feel what you feel.</p></div>-->
+   </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>📨 Contact Us</h2>
+    <form>
+      <h3>We’d love to hear from you</h3>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 MindCare Daily | Your mental health matters 💚
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    });
+
+    // Daily Quotes Array
+    const quotes = [
+      "You don’t have to be positive all the time. It’s okay to feel what you feel.",
+      "Your mental health is a priority. Your happiness is essential.",
+      "Be proud of how far you’ve come, and have faith in how far you can go.",
+      "Healing takes time, and asking for help is a courageous step.",
+      "You are not a burden. You are a person who deserves care and love.",
+      "Don’t let your struggle become your identity. You are more than your pain.",
+      "Progress, not perfection. Every small step forward matters."
+    ];
+
+    // Pick a quote based on the day of the week
+    const today = new Date().getDay();
+    document.getElementById("daily-quote").textContent = quotes[today % quotes.length];
+    
+  </script>
+</body>
+</html>
