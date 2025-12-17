@@ -9,8 +9,20 @@
 <body>
   <!-- Navigation -->
   <nav>
-    <h1>MindCare Daily</h1>
-    <ul>
+    <h1>MindCare Daily 🤍</h1>
+
+    <input type="checkbox" id="hamburger" /> 
+    <label for="hamburger" class="hamburger">
+    <!--<div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>-->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    </label>
+
+    <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#reminders">Reminders</a></li>
       <li><a href="#tips">Tips</a></li>
@@ -126,12 +138,12 @@
   <!-- Contact Form -->
   <section id="contact">
     <h2>📨 Contact Us</h2>
-    <form>
+     <form>
       <h3>We’d love to hear from you</h3>
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea rows="5" placeholder="Your Message..." required></textarea>
-      <button type="submit">Send Message</button>
+     <button type="submit">Send Message</button>
     </form>
   </section>
 
@@ -168,6 +180,19 @@
     const today = new Date().getDay();
     document.getElementById("daily-quote").textContent = quotes[today % quotes.length];
     
+   // const hamburger =document.getElementById('hamburger')
+    //const navLinks =document.getElementById('nav-links')
+   // const links =document.querySelectorAll('.nav-link')
+
+   // hamburger.addEventListener('click', () => {
+    //  navLinks.classList.hamburger('show')
+    //})
+
+   // links.forEach(link => {
+    //  link.addEventListener('click', () => {
+    //   navLinks.classList.remove('show') 
+     // })
+  //  })
   </script>
 </body>
 </html>
