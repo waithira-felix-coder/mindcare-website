@@ -14,9 +14,74 @@
       overflow-x: hidden;
     }
 
+    /*humergur icon*/
+    #hamburger{
+      display: none;
+    }
+    .hamburger{
+      display: block;
+      flex-direction: column;
+      gap: 0.6px;
+
+      cursor: pointer;
+    }
+    .hamburger span{
+       width: 30px;
+       height: 2px;
+       background: rgb(255, 255, 255);
+       margin: 5px 0;
+       border-radius: 0.5px;
+       transition: 0.3s ease;
+    }
+    .nav-links{
+      list-style: none;
+      display: flex;
+      gap: 25px;
+     
+    }
+    .nav-links a{
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+
+    }
+      #hamburger:checked + .nav-links {
+        display: block;
+        background-color: transparent;
+      }
+
+    @media(max-width: 768px){
+      .hamburger{
+        display: flex;
+
+      }
+      .nav-links{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #222;
+        width: 200px;
+        flex-direction: column;
+        display: none;
+        
+        padding: 20px;
+        border-radius: 5px;
+      }
+      #hamburger:checked ~ .nav-links {
+        display: flex;
+          background-color: #008080;
+          backdrop-filter: blur(10px);
+          border: yellowgreen solid 2px;
+          border-radius: 15%;
+          gap: 4px;
+         font-size: bold;
+      }
+    }
+
     /* ---------- Navigation ---------- */
     nav {
       background-color: #2e8b57;
+  backdrop-filter: blur(20px);
       color: white;
       display: flex;
       justify-content: space-between;
@@ -48,6 +113,7 @@
 
     nav ul li a:hover {
       color: #d3f3e0;
+      border-bottom: 2px solid;
     }
 
     /* ---------- Hero Section ---------- */
